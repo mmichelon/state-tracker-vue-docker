@@ -1,33 +1,20 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/SignUp">Sign Up</router-link>
-
-    </div> -->
     <div>
-  <b-navbar type="dark" variant="dark">
-    <b-navbar-nav>
-      <b-nav-item router-link to="/">Home</b-nav-item>
-      <b-nav-item router-link to="/signup" v-show="!user">Log In</b-nav-item>
-      <b-nav-item router-link to="/" @click="signoutButtonPressed" v-show="user">Log Out</b-nav-item>
+      <b-navbar type="dark" variant="dark">
+        <b-navbar-nav>
+          <b-nav-item router-link to="/">Home</b-nav-item>
+          <b-nav-item router-link to="/state" v-show="user">States</b-nav-item>
 
-      <!-- Navbar dropdowns -->
-      <!-- <b-nav-item-dropdown text="Lang" right>
-        <b-dropdown-item href="#">EN</b-dropdown-item>
-        <b-dropdown-item href="#">ES</b-dropdown-item>
-        <b-dropdown-item href="#">RU</b-dropdown-item>
-        <b-dropdown-item href="#">FA</b-dropdown-item>
-      </b-nav-item-dropdown> -->
+          <b-nav-item-dropdown text="User" right>
+            <b-dropdown-item router-link to="/account">Account</b-dropdown-item>
+          </b-nav-item-dropdown>
 
-      <b-nav-item-dropdown text="User" right>
-        <b-dropdown-item router-link to="/account">Account</b-dropdown-item>
-        <!-- <b-dropdown-item href="#">Settings</b-dropdown-item> -->
-      </b-nav-item-dropdown>
-    </b-navbar-nav>
-  </b-navbar>
-</div>
+          <b-nav-item class = "ml-auto" router-link to="/signup" v-show="!user">Log In</b-nav-item>
+          <b-nav-item class = "ml-auto" router-link to="/" @click="signoutButtonPressed" v-show="user">Log Out</b-nav-item>
+        </b-navbar-nav>
+      </b-navbar>
+    </div>
     <router-view/>
   </div>
 </template>

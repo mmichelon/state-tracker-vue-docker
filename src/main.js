@@ -11,7 +11,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 //Firebase
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-// import 'firebase/compat/firestore';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCcNofNjY-g_WvzDt57af3crea8egcL1rs",
